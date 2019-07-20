@@ -6,7 +6,8 @@ This project is trying to implement convex hull by using Graham's Scan Algorithm
 ```
 Command line >> python convex_hull_test.py 
 ```
-
+![](README_IMG/GrahamScanDemo.gif)
+![](README_IMG/convex_hull.png)
 
 ## Code
 - [Image Contours](https://github.com/Hank-Tsou/Computer-Vision-OpenCV-Python/tree/master/tutorials/Image_Processing/8_Image_Contours)
