@@ -21,6 +21,7 @@ NOTE:
 Time Complexity: O(nlogn)
 ```
 The process animation show as below [(from Wikipedia)](https://en.wikipedia.org/wiki/Graham_scan)
+
 ![](README_IMG/GrahamScanDemo.gif)
 
 I seperate the process in two part:
