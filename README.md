@@ -24,9 +24,12 @@ The process demo of Graham's scann show as below [(from Wikipedia)](https://en.w
 
 ![](README_IMG/GrahamScanDemo.gif)
 
-I seperate the process in two part:
 #### Part 1: sort the points
-
+a. find the start points: this project find the (smallest x, smallest y) as start points.
+b. sort the points: this project calculate 'theta' to sort the points if points have same angle use distance to sort.
+```
+NOTE: any sorting algorithm can apply to this part, this project using merge sort. time complexity O(nlogn)
+```
 #### Part 2: Algorithm to consider the point in convex set or not
 
 
