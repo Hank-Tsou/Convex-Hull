@@ -11,7 +11,9 @@ Command line: python convex_hull_implementation.py
 ```
 ![](README_IMG/convex_hull.png)
 ```
-NOTE: the green dots are random points and the blue line is the "convex hull" of the points
+NOTE: 
+  - the green dots are random points and the blue line is the "convex hull" of the points
+  - the corner with no green dot is the start points, because for image the origin of coordinates is on the top-left
 ```
 #### Graham's Scan Algorithm
 ![](README_IMG/GrahamScanDemo.gif)
