@@ -20,12 +20,13 @@ NOTE:
 ```
 Time Complexity: O(nlogn)
 ```
-The process animation show as below [(from Wikipedia)](https://en.wikipedia.org/wiki/Graham_scan)
+The process demo of Graham's scann show as below [(from Wikipedia)](https://en.wikipedia.org/wiki/Graham_scan)
 
 ![](README_IMG/GrahamScanDemo.gif)
 
 I seperate the process in two part:
 #### Part 1: sort the points
+
 #### Part 2: Algorithm to consider the point in convex set or not
 
 
