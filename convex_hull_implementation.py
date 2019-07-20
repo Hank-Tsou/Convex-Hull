@@ -114,7 +114,7 @@ if __name__ == '__main__':
     # command line >> python convex_hull_test.py
 
 	# generate points
-	pts=create_points(50)
+	pts=create_points(10)
 	# generate black image
 	blank_image = np.zeros((600,600,3), np.uint8)
 	# calculate convex hull by using graham scan
