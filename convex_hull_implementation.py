@@ -36,7 +36,7 @@ def distance(p):
 
 # -------------------- canvex hull or not -------------------- #
 def judge(p1, p2, p3):
-    return (p2[0]-p1[0])*(p3[1]-p1[1])-(p2[1]-p1[1])*(p3[0]-p1[0])
+    return (p2[0]-p3[0])*(p1[1]-p3[1])-(p2[1]-p3[1])*(p1[0]-p3[0])
 
 # -------------------- sort points with theta and distance -------------------- #
 def MergeSort(points, result, begin, end):
@@ -93,7 +93,7 @@ def graham_scan(points):
             start = points[i]
         if start[1] == y and start[0] > x:
             start = points[i]
-
+	
 	# remove start point form the points group
     del points[points.index(start)]
 
@@ -104,7 +104,7 @@ def graham_scan(points):
 	# Graham's Scan Algorithm
     hull=[start,points[0]]
     for p in (points[1:]):
-        while judge(hull[-2], hull[-1], p) <= 0:
+        while judge(p, hull[-1], hull[-2]) <= 0:
             del hull[-1]
         hull.append(p)
 
@@ -114,7 +114,7 @@ if __name__ == '__main__':
     # command line >> python convex_hull_implementation.py
 
 	# generate points
-	pts=create_points(10)
+	pts=create_points(50)
 	# generate black image
 	blank_image = np.zeros((600,600,3), np.uint8)
 	# calculate convex hull by using graham scan
