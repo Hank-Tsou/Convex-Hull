@@ -111,6 +111,7 @@ def draw_points(image, points):
 
 
 if __name__ == '__main__':
+    # command line >> python convex_hull_test.py 
 
 	# generate points
     pts=create_points(50)
