@@ -111,21 +111,21 @@ def draw_points(image, points):
 
 
 if __name__ == '__main__':
-    # command line >> python convex_hull_test.py 
+    # command line >> python convex_hull_test.py
 
 	# generate points
-    pts=create_points(50)
+	pts=create_points(50)
 	# generate black image
 	blank_image = np.zeros((600,600,3), np.uint8)
 	# calculate convex hull by using graham scan
-    hull=graham_scan(pts)
+	hull=graham_scan(pts)
 	# draw convex hull and points
-    contour_img = cv2.drawContours(blank_image, [np.asarray(hull)], -1, (255,0,0), 3)
-    draw_points(blank_image, pts)
+	contour_img = cv2.drawContours(blank_image, [np.asarray(hull)], -1, (255,0,0), 3)
+	draw_points(blank_image, pts)
 
 	# show the result
 	cv2.imshow("result", blank_image)
 
-    k = cv2.waitKey(0)
-    if k == 27:         # wait for ESC key to exit
-        cv2.destroyAllWindows()
+	k = cv2.waitKey(0)
+	if k == 27:         # wait for ESC key to exit
+		cv2.destroyAllWindows()
