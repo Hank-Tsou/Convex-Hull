@@ -28,6 +28,8 @@ The process demo of Graham's scann show as below [(from Wikipedia)](https://en.w
 (a) Find the start points: This project find the (smallest x, smallest y) as start points.
 
 (b) Sort the points: This project calculate angle(theta) to sort the points, if points have same angle use distance to sort.
+
+![](README_IMG/theta.png)
 ```
 NOTE: any sorting algorithm can apply to this part, this project using merge sort. 
       * time complexity O(nlogn)
@@ -36,6 +38,8 @@ NOTE: any sorting algorithm can apply to this part, this project using merge sor
 (a) Select last two points(P1, P2) in convex hull and a points(P3).
 
 (b) If (P2[0]-P1[0]) * (P3[1]-P1[1]) - (P2[1]P1[1]) * (P3[0]-P1[0]) <= 0, P2 is not in convex hull.
+
+![](README_IMG/distance.png)
 
 ## Code
 - [Image Contours](https://github.com/Hank-Tsou/Computer-Vision-OpenCV-Python/tree/master/tutorials/Image_Processing/8_Image_Contours)
