@@ -25,9 +25,9 @@ The process demo of Graham's scann show as below [(from Wikipedia)](https://en.w
 ![](README_IMG/GrahamScanDemo.gif)
 
 #### Part 1: sort the points
-a. find the start points: this project find the (smallest x, smallest y) as start points.
+(a) Find the start points: This project find the (smallest x, smallest y) as start points.
 
-b. sort the points: this project calculate 'theta' to sort the points if points have same angle use distance to sort.
+(b) Sort the points: This project calculate 'theta' to sort the points, if points have same angle use distance to sort.
 ```
 NOTE: any sorting algorithm can apply to this part, this project using merge sort. 
       * time complexity O(nlogn)
