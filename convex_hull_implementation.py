@@ -14,11 +14,17 @@ from random import randint # random function for generate points
 from math import atan2 # calculate theta
 import numpy as np
 import argparse
+import math
 import cv2
 
 # -------------------------- Gnenerate random points -------------------------- #
-def create_points(number,min=0,max=500):
-	return [[randint(min,max),randint(min,max)] for _ in range(number)]
+def create_points(number):
+	return [[randint(0, 500),randint(0, 500)] for i in range(number)]
+
+# -------------------- function to draw the random points -------------------- #
+def draw_points(image, points):
+    for i in range(len(points)):
+        cv2.circle(image,(points[i][0], points[i][1]), 2, (0, 255, 0), 3)
 
 # ------------------------ calculate theta for sorting ------------------------ #
 def theta(p):
@@ -26,7 +32,11 @@ def theta(p):
 
 # ----------- calculate distance from start points when same theta ------------ #
 def distance(p):
-    return (p[1]-start[1])**2 + (p[0]-start[0])**2
+    return math.sqrt((p[1]-start[1])**2 + (p[0]-start[0])**2)
+
+# -------------------- canvex hull or not -------------------- #
+def judge(p1, p2, p3):
+    return (p2[0]-p1[0])*(p3[1]-p1[1])-(p2[1]-p1[1])*(p3[0]-p1[0])
 
 # -------------------- sort points with theta and distance -------------------- #
 def MergeSort(points, result, begin, end):
@@ -72,10 +82,6 @@ def MergeSort(points, result, begin, end):
     for k in range(begin, end+1):
         points[k] = result[k]
 
-# -------------------- canvex hull or not -------------------- #
-def judge(p1, p2, p3):
-    return (p2[0]-p1[0])*(p3[1]-p1[1])-(p2[1]-p1[1])*(p3[0]-p1[0])
-
 # -------------------- Graham's Scan Algorithm -------------------- #
 def graham_scan(points):
     global start
@@ -104,14 +110,8 @@ def graham_scan(points):
 
     return hull
 
-# -------------------- function to draw the random points -------------------- #
-def draw_points(image, points):
-    for i in range(len(points)):
-        cv2.circle(image,(points[i][0], points[i][1]), 2, (0, 255, 0), 3)
-
-
 if __name__ == '__main__':
-    # command line >> python convex_hull_implementation.py 
+    # command line >> python convex_hull_implementation.py
 
 	# generate points
 	pts=create_points(10)
