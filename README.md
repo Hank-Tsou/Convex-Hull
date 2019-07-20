@@ -1,4 +1,4 @@
-# Convex Hull
+# Convex Hull (readme unfinished)
 ```
 This project is trying to implement convex hull by using Graham's Scan Algorithm.
 ```
